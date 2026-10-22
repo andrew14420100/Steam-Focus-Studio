@@ -29,3 +29,10 @@ Direttore/orchestratore; ricerca notizie; verifica fatti; ricerca filmati; verif
 8. Alla fine riporta file cambiati, commit, test e prossimo step.
 
 Il prodotto finale deve poter ricevere un comando come **Genera notiziario**, ricercare notizie e filmati, scrivere copione, generare voce e sottotitoli, montare e renderizzare in 4K, controllare il risultato e preparare i metadati. Procedi incrementando il sistema per fasi reali e verificabili.
+
+## Requisito critico aggiuntivo: il sistema deve partire da zero
+Non creare soltanto un editor che aspetta che l'utente carichi video. L'utente deve poter premere **Genera notiziario** senza fornire filmati o copioni. Il sistema ricerca la notizia, trova autonomamente filmati pertinenti legalmente utilizzabili, verifica la risoluzione reale, scrive il copione, genera voce e sottotitoli, compone il montaggio e controlla l'MP4 finale.
+Valuta e integra un editor locale con timeline controllabile tramite MCP su Windows, così l'AI possa manipolare un progetto reale e l'utente possa osservare/modificare le operazioni. Verifica prima licenze e costo reale delle opzioni (Kaestral, vedit o alternative). Non adottare un editor macOS-only né una funzione generativa che richieda abbonamento come requisito.
+Zero euro significa niente API a pagamento o crediti cloud obbligatori; usa strumenti e modelli locali per le attività di produzione. Il solo input manuale ordinario è il comando di avvio o, facoltativamente, un argomento.
+Mantieni il requisito dei diritti media: la ricerca deve essere automatica ma non deve aggirare limitazioni di download. Se non esiste un filmato 4K nativo riutilizzabile, non fingere di averlo trovato e registra uno stato blocked, con un report delle ricerche svolte. Una modalità upscale separata è ammessa solo se chiaramente etichettata.
+
