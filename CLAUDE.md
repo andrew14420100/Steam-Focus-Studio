@@ -109,3 +109,14 @@ Supportare sia una singola notizia sia un notiziario multi-notizia. Durata confi
 
 ## Regola finale
 Leggi prima `README.md` e `docs/`. Esegui audit e aggiorna la roadmap, poi implementa la prima fase concreta e prosegui in modo incrementale. Al termine riporta file modificati, comandi eseguiti, test passati/falliti e prossimo passaggio. Non dichiarare mai completamento senza prove.
+
+## Requisito prodotto essenziale: produzione da zero, non solo editing
+L'utente NON deve dover fornire un video iniziale, preparare una cartella footage, trovare manualmente filmati, scrivere il copione, registrare la voce o creare i sottotitoli. L'unico input ordinario deve poter essere un click su **Genera notiziario** oppure un argomento facoltativo. Da quel punto il sistema deve eseguire autonomamente ricerca, verifica, ricerca e acquisizione lecita dei media, copione, storyboard, voce, sottotitoli, montaggio, QA e packaging.
+- Integrare un editor vero con timeline controllabile da agenti tramite MCP quando possibile, così la timeline è visibile e modificabile; l'editor è una parte della pipeline, non l'intera pipeline.
+- Valutare per Windows editor open source AI-operated con MCP (ad esempio Kaestral, vedit o alternative), verificando davvero supporto Windows, licenza, funzioni e costi correnti prima di adottarlo.
+- L'agente media deve cercare filmati pertinenti alla specifica notizia e non aspettare che l'utente li carichi. Deve acquisire solo file da fonti e modalità di download consentite, registrando URL, diritti/permesso, risoluzione e crediti.
+- I modelli video generativi non sono requisito se non sono gratuiti senza limiti o non producono gameplay fedele. Per notizie gaming reali, preferire filmati reali ufficiali e autorizzati. Non promettere che ogni notizia abbia gameplay 4K nativo disponibile.
+- Se il video 4K autorizzato non esiste, continuare la ricerca e poi bloccare la modalità "4K nativo" con motivazione chiara; non chiedere all'utente di reperire manualmente media come flusso ordinario e non fingere la riuscita. Può offrire una distinta modalità alternativa 4K-upscaled solo se il progetto/configurazione la consente e l'etichetta è esplicita.
+- La modalità senza costi deve evitare API a pagamento, crediti cloud e abbonamenti obbligatori. L'accesso a Claude Code può comunque avere limiti propri; per l'esecuzione quotidiana la pipeline deve usare modelli locali e strumenti gratuiti, non dipendere da chiamate Claude remote.
+- Non scambiare "timeline editata da un agente" con "video creato da zero": il flusso deve partire da topic/news e reperire i propri materiali.
+
