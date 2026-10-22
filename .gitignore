@@ -1,0 +1,47 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.next/
+
+# Runtime data and large media — never commit generated videos/models
+data/
+media/
+footage/
+assets_cache/
+cache/
+models/
+outputs/
+output/
+renders/
+
+# Local databases and logs
+*.sqlite
+*.sqlite3
+*.db
+logs/
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
